@@ -14,7 +14,7 @@ departments = Department.create!([{ name: 'HR' }, { name: 'Tech' }, { name: 'Fin
 
 ACTIVE.each do |act|
   departments.each do |department|
-    100.times { Employee.create!(name: Faker::Name.first_name, department_id: department.id, active: act) }
+    7.times { Employee.create!(name: Faker::Name.first_name, department_id: department.id, active: act) }
   end
 end
 
