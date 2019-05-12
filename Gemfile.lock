@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/elastic/elasticsearch-rails.git
+  revision: bfdd2243f0de298547b2dc199e9a671cf72ccde6
+  branch: 5.x
+  specs:
+    elasticsearch-model (5.1.0)
+      activesupport (> 3)
+      elasticsearch (~> 5)
+      hashie
+    elasticsearch-rails (5.1.0)
+
+GIT
   remote: https://github.com/stympy/faker.git
   revision: ed382d11a58311f1701f82bbe18f3b4fb7636e27
   branch: master
@@ -89,15 +100,26 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    elasticsearch (5.0.5)
+      elasticsearch-api (= 5.0.5)
+      elasticsearch-transport (= 5.0.5)
+    elasticsearch-api (5.0.5)
+      multi_json
+    elasticsearch-transport (5.0.5)
+      faraday
+      multi_json
     equatable (0.5.0)
     erubi (1.8.0)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     ffi (1.10.0-java)
     ffi (1.10.0-x64-mingw32)
     ffi (1.10.0-x86-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (3.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -125,6 +147,7 @@ GEM
     msgpack (1.2.10-x64-mingw32)
     msgpack (1.2.10-x86-mingw32)
     multi_json (1.13.1)
+    multipart-post (2.1.0)
     nio4r (2.3.1)
     nio4r (2.3.1-java)
     nokogiri (1.10.3)
@@ -258,6 +281,8 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  elasticsearch-model!
+  elasticsearch-rails!
   faker!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
