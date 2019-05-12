@@ -1,4 +1,6 @@
 class DepartmentsController < ApplicationController
+  http_basic_authenticate_with name: "name", password: "password", except: [:index, :show]
+
   before_action :set_department, only: [:show, :edit, :update, :destroy]
 
   # GET /departments
